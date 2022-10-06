@@ -12,7 +12,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:3001/pokemons")
+            .get("https://pokefight-project.herokuapp.com/pokemons")
             .then((response) => {
                 console.log(response.data);
                 setPokemons(response.data);
