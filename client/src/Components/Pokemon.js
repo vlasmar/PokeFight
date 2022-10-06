@@ -9,7 +9,7 @@ const Pokemon = () => {
 
     useEffect(() => {
         axios
-          .get(`http://localhost:3001/pokemons/${id}`)
+          .get(`https://pokefight-project.herokuapp.com/pokemons/${id}`)
           .then((response) => {
             setPokemon(response.data);
           })
