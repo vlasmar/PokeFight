@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 
+
 import PokemonsList from './Components/PokemonsList';
 import Pokemon from './Components/Pokemon';
 import PokemonInfo from './Components/PokemonInfo';

@@ -13,8 +13,8 @@ const PokemonsList = ({pokemons}) => {
   }
 
   return (
-    <div>
-      <button onClick={chooseRandom}>Click to choose Random Pokemons</button>
+    <div className="containerCards">
+      <button className="buttonList" onClick={chooseRandom}>Click to choose Random Pokemons</button>
       {player1 && player2 && (
         <div>
           <div>
@@ -53,12 +53,12 @@ const PokemonsList = ({pokemons}) => {
               {player2.base.Speed}
             </div>
           </div>
-          <button>Begin Fight!</button>
+          <button className="buttonList">Begin Fight!</button>
         </div>
       )}
         {pokemons.map((pokemon) => {
           return(
-            <p>
+            <p className="pokeprofile">
             <NavLink to={`/pokemons/${pokemon.id}`}>
             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={pokemon.id}/>
               {pokemon.name.english}
