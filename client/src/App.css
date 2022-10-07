@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
 
-*{
+body{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .App {
@@ -66,6 +66,47 @@
 }
 
 .pokeprofile{
-  border: 5px;
-  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pokemons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.pokemon-page{
+  text-align: center;
+}
+
+.pokemon-item{
+  width: 32%;
+  padding: 15px 10px;
+}
+
+.pokemon-item img{
+  width: 120px;
+}
+
+.chosen-pokemons{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.random-pokemons{
+  display: flex;
+}
+
+.pokemon-card{
+  padding: 5rem;
+  text-align: center;
+}
+
+.fight-button{
+  display: block;
 }
