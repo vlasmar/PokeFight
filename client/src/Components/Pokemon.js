@@ -23,7 +23,7 @@ const Pokemon = () => {
     <div>
         {pokemon && (
         <>
-          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}/>
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={pokemon.name.english}/>
           <NavLink to={`/pokemons/${id}/name`}><h1>{pokemon.name.english}</h1></NavLink>
           <ul>
             <li>{pokemon.name.japanese}</li>

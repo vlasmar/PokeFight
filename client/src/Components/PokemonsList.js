@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Fight from "./Fight";
 
 const PokemonsList = ({pokemons}) => {
   const [player1, setPlayer1] = useState();
@@ -13,17 +12,13 @@ const PokemonsList = ({pokemons}) => {
     setPlayer2(chosenPokemon2);
   }
 
-  const fight = (player1, player2) => {
-    
-  }
-
   return (
     <div>
       <button onClick={chooseRandom}>Click to choose Random Pokemons</button>
       {player1 && player2 && (
         <div>
           <div>
-            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${player1.id}.png`}/>
+            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${player1.id}.png`} alt={player1.id}/>
             <h3>{player1.name.english}</h3>
             <h4>Type:</h4>
             {player1.type.map((type) => {
@@ -41,7 +36,7 @@ const PokemonsList = ({pokemons}) => {
             </div>
           </div>
           <div>
-            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${player2.id}.png`}/>
+            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${player2.id}.png`} alt={player2.id}/>
             <h3>{player2.name.english}</h3>
             <h4>Type:</h4>
             {player2.type.map((type) => {
@@ -58,14 +53,14 @@ const PokemonsList = ({pokemons}) => {
               {player2.base.Speed}
             </div>
           </div>
-          <button onClick={fight(player1, player2)}>Begin Fight!</button>
+          <button>Begin Fight!</button>
         </div>
       )}
         {pokemons.map((pokemon) => {
           return(
             <p>
             <NavLink to={`/pokemons/${pokemon.id}`}>
-            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} />
+            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={pokemon.id}/>
               {pokemon.name.english}
             </NavLink>
             </p>
