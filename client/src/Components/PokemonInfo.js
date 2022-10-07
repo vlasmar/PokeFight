@@ -22,28 +22,31 @@ const Pokemon = () => {
     
 
   return (
-    <div >
-        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} alt={pokemonInfo.english}/>
+    <div className="pokemon-page">
+        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} alt={id}/>
         {pokemonInfo && (
         <div>
           {info === "name" ? (
               <div>
-                {pokemonInfo.english}
-                {pokemonInfo.japanese}
-                {pokemonInfo.chinese}
-                {pokemonInfo.french}
+                <h3>Names</h3>
+                <p>English: {pokemonInfo.english}</p>
+                <p>Japanese: {pokemonInfo.japanese}</p>
+                <p>Chinese: {pokemonInfo.chinese}</p>
+                <p>French: {pokemonInfo.french}</p>
               </div>
             ) : info === "base" ? (
                 <div>
-                  {pokemonInfo.HP}
-                  {pokemonInfo.Attack}
-                  {pokemonInfo.Defense}
-                  {pokemonInfo['Sp. Attack']}
-                  {pokemonInfo['Sp. Defense']}
-                  {pokemonInfo.Speed}
+                  <h3>Stats</h3>
+                  <p>HP: {pokemonInfo.HP}</p>
+                  <p>Attack: {pokemonInfo.Attack}</p>
+                  <p>Defense: {pokemonInfo.Defense}</p>
+                  <p>Sp. Attack: {pokemonInfo['Sp. Attack']}</p>
+                  <p>Sp. Defense: {pokemonInfo['Sp. Defense']}</p>
+                  <p>Speed: {pokemonInfo.Speed}</p>
                 </div>
               ) : info === "type" ? (
                 <div>
+                  <h3>Type</h3>
                     {pokemonInfo.map((type) => {
                       return (
                         <p>{type}</p>
