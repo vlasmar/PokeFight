@@ -8,6 +8,7 @@ body{
 
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -89,6 +90,21 @@ body{
   padding: 15px 10px;
 }
 
+
+.header{
+
+}
+
+.pokeLogo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+
 .pokemon-item img{
   width: 120px;
 }
@@ -110,3 +126,4 @@ body{
 .fight-button{
   display: block;
 }
+

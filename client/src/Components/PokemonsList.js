@@ -14,6 +14,7 @@ const PokemonsList = ({pokemons}) => {
 
   return (
     <div className="containerCards">
+
       <button className="buttonList" onClick={chooseRandom}>Click to choose Random Pokemons</button>
       <div className="chosen-pokemons">
       {player1 && player2 && (

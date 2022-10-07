@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 
+
 const Pokemon = () => {
     const [pokemonInfo, setPokemonInfo] = useState();
     const { id, info } = useParams();
